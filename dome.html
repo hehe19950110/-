@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Page滚动</title>
+  <style>
+    body { margin: 0;}
+    section {height: 100vh;}
+    section:nth-child(1) {background: red;}
+    section:nth-child(2) {background: yellow;}
+    section:nth-child(3) {background: blue;}
+    section:nth-child(4) {background: green;}
+
+  </style>
+</head>
+
+<body>
+  <section>page 1 ,按上下键滚动页面</section>
+  <section>page 2 ,按上下键滚动页面</section>
+  <section>page 3 ,按上下键滚动页面</section>
+  <section>page 4 ,按上下键滚动页面</section>
+<script>
+  window.onkeydown = function(e) {
+    console.log(e)
+    if(e.key ==='ArrowDown') {
+      e.preventDefault()
+      window.scrollBy({
+        top:window.innerHeight,
+        behavior:"smooth",
+      })
+    }else if(e.key ==='ArrowUp') {
+      e.preventDefault()
+      window.scrollBy({
+        top:0 - window.innerHeight,
+        behavior:"smooth",
+      })
+    }
+  }
+</script>
+</body>
+</html>

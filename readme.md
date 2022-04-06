@@ -21,3 +21,6 @@ window.scrollBy({
 window.onkeydown = function(e) {console.log(e)  先定义执行摁下键盘键
 
 e.preventDefault()  因为上下键本身自带含义，先需要取消上下键的默认属性，再才按照设定的滚动方式来实行
+
+scrollBy() 方法是使得元素滚动一段特定距离的 Element 接口。
+让元素滚动：element.scrollBy(300, 300);
